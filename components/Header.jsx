@@ -27,9 +27,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className=" top-0 left-0 w-full bg-gray-200 border-b border-black h-16 z-9 mb-10 border border-red-300">
-      <div className="flex m-auto items-center px-2 py-6 h-full justify-between max-w-max border border-red-300 ">
-        <nav className="justify-start flex-none m-3 border border-red-300">
+    <div className=" top-0 left-0 w-full bg-gray-200 border-b border-black h-16 z-9 mb-10 ">
+      <div className="flex m-auto items-center px-2 py-6 h-full justify-between max-w-max ">
+        <nav className="justify-start flex-none m-3 ">
           <button></button>
           <Link href="/">
             <span className="whitespace-nowrap text-base font-semibold cursor-pointer">
