@@ -39,10 +39,13 @@ export default function Home({ posts }) {
         </header>
         <div className="container">
           <h2 className="main-header">
-            <span>Latest Articles</span>
+            <span>Latest Articles</span> <a href="/blog">View All</a>
           </h2>
+
           <div>
-            <div></div>
+            {posts.map((post, index) => (
+              <PostCard key={index} post={post.node} />
+            ))}
           </div>
 
           <h2 className="main-header">
