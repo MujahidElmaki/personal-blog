@@ -20,9 +20,9 @@ export default function Home({ posts }) {
           <div className="container">
             <div className="flex-content">
               <div>
-                <h1>Hey, I'm Mujahid.</h1>
+                <h1>Hey, Im Mujahid.</h1>
                 <p className="subtitle small">
-                  I'm a software developer in Ontario, Canada. I love learning
+                  Im a software developer in Ontario, Canada. I love learning
                   and sharing my experiences, this website is my digital home.
                   Highlighting my journey over the years!
                 </p>
@@ -42,11 +42,7 @@ export default function Home({ posts }) {
             <span>Latest Articles</span>
           </h2>
           <div>
-            <div>
-              {posts.map((post) => (
-                <li>{post.title}</li>
-              ))}
-            </div>
+            <div></div>
           </div>
 
           <h2 className="main-header">
