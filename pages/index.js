@@ -1,34 +1,61 @@
 import Head from 'next/head';
-import { PostCard, Categories, PostWidget } from '../components';
+import { PostCard, Categories, PostWidget, Footer } from '../components';
+import Link from 'react';
+import maki from '../assets/maki2.jpg';
 import { getPosts } from '../services';
 import { FeaturedPosts } from '../sections';
+import Image from 'next/image';
+
 export default function Home({ posts }) {
   return (
-    <div
-      className="container mx-auto px-10 mb-8
-    "
-    >
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Mujahid Elmaki</title>
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FeaturedPosts />
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
-          {posts.map((post, index) => (
-            <PostCard post={post.node} key={post.title} />
-          ))}
-        </div>
-
-        <div className="lg: col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            <PostWidget />
-            <Categories />
+      {/* <FeaturedPosts /> */}
+      <article className="hero">
+        <header>
+          <div className="container">
+            <div className="flex-content">
+              <div>
+                <h1>Hey, I'm Mujahid.</h1>
+                <p className="subtitle small">
+                  I'm a software developer in Ontario, Canada. I love learning
+                  and sharing my experiences, this website is my digital home.
+                  Highlighting my journey over the years!
+                </p>
+              </div>
+              <Image
+                src={maki}
+                alt="Me"
+                className="main-image"
+                height="250px"
+                width="300px"
+              />
+            </div>
           </div>
+        </header>
+        <div className="container">
+          <h2 className="main-header">
+            <span>Latest Articles</span>
+          </h2>
+          <div>
+            <div>
+              {posts.map((post) => (
+                <li>{post.title}</li>
+              ))}
+            </div>
+          </div>
+
+          <h2 className="main-header">
+            <span>Highlights</span>
+          </h2>
+          <FeaturedPosts />
         </div>
-      </div>
-    </div>
+      </article>
+    </>
   );
 }
 
