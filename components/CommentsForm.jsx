@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-import { sumbitComment } from '../services';
+import { submitComment } from '../services';
 
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false);
@@ -42,7 +42,7 @@ const CommentsForm = ({ slug }) => {
       window.localStorage.removeItem('email', email);
     }
 
-    sumbitComment(commentObj).then((res) => {
+    submitComment(commentObj).then((res) => {
       setShowSuccessMessage(true);
       setTimeout(() => {
         setShowSuccessMessage(false);
