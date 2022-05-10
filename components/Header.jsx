@@ -50,7 +50,7 @@ const Header = () => {
             <ul className="inline grid grid-cols-3">
               {mainNavItems.map((item) => (
                 <>
-                  <li activeClassName="" key={item.label}>
+                  <li key={item.label}>
                     <Link href={item.url}>
                       <a>{item.label}</a>
                     </Link>
