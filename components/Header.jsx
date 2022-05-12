@@ -32,32 +32,25 @@ const Header = () => {
     <header className="navigation">
       <div className="navigation-inner">
         <nav className="brand-section">
-          <button
+          {/* <button
             className="desktop-only collapse-button"
             title="Collapse Sidebar"
           >
             <Hamburger />
-          </button>
+          </button> */}
 
-          <Link href="/" className="brand">
-            <span className="whitespace-nowrap text-base font-semibold cursor-pointer">
-              Mujahid Elmaki
-            </span>
-          </Link>
+          <a href="/" className="brand">
+            <span>Mujahid Elmaki</span>
+          </a>
         </nav>
-        <div className="mt-10">
+        <div>
           <nav>
-            <ul className="inline grid grid-cols-3">
-              {mainNavItems.map((item) => (
-                <>
-                  <li key={item.label}>
-                    <Link href={item.url}>
-                      <a>{item.label}</a>
-                    </Link>
-                  </li>
-                </>
-              ))}
-            </ul>
+            {mainNavItems.map((item) => (
+              <a href={item.url} key={item.label} activeClassName="active">
+                <Image src={item.icon} alt={item.label} />
+                <div className="tooltip">{item.label}</div>
+              </a>
+            ))}
           </nav>
         </div>
 

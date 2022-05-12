@@ -10,3 +10,4 @@ export { default as PostDetail } from './PostDetail';
 export { default as FeaturedPostCard } from './FeaturedPostCard';
 export { default as Loader } from './Loader';
 export { default as Footer } from './Footer';
+export { default as Post } from './Post';

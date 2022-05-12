@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { PostCard, Categories, PostWidget, Footer } from '../components';
+import { Post, PostCard, Categories, PostWidget, Footer } from '../components';
 import Link from 'react';
 import maki from '../assets/maki2.jpg';
 import { getPosts } from '../services';
@@ -31,8 +31,8 @@ export default function Home({ posts }) {
                 src={maki}
                 alt="Me"
                 className="main-image"
-                height="250px"
-                width="300px"
+                height="400px"
+                width="400px"
               />
             </div>
           </div>
@@ -44,14 +44,18 @@ export default function Home({ posts }) {
 
           <div>
             {posts.map((post, index) => (
-              <PostCard key={index} post={post.node} />
+              <Post key={index} post={post.node} />
             ))}
           </div>
 
           <h2 className="main-header">
             <span>Highlights</span>
           </h2>
-          <FeaturedPosts />
+          <div>
+            {posts.map((post, index) => (
+              <Post key={index} post={post.node} />
+            ))}
+          </div>
         </div>
       </article>
     </>
