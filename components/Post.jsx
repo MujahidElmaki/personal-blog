@@ -18,8 +18,8 @@ const Post = ({ post, hideDate, yearOnly }) => {
   let formattedYear = moment(post.createdAt).format('YYYY');
   console.log(post);
   return (
-    <>
-      <a href={`/post/${post.slug}`} className={isNew ? 'post new' : 'post'}>
+    <Link href={`/post/${post.slug}`}>
+      <a className={isNew ? 'post new' : 'post'}>
         <span className="flex" style={{ alignItems: 'center' }}>
           <h3>{post.title} </h3>
           <span className="new-badge">{isNew && 'New!'}</span>
@@ -30,7 +30,7 @@ const Post = ({ post, hideDate, yearOnly }) => {
           )}
         </div>
       </a>
-    </>
+    </Link>
   );
 };
 

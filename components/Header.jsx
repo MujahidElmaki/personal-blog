@@ -38,40 +38,37 @@ const Header = () => {
           >
             <Hamburger />
           </button> */}
-
-          <a href="/" className="brand">
-            <span>Mujahid Elmaki</span>
-          </a>
+          <Link href="/">
+            <a className="brand">
+              <span>Mujahid Elmaki</span>
+            </a>
+          </Link>
         </nav>
         <div>
           <nav>
             {mainNavItems.map((item) => (
-              <a href={item.url} key={item.label} activeClassName="active">
-                <Image src={item.icon} alt={item.label} />
-                <div className="tooltip">{item.label}</div>
-              </a>
+              <Link href={item.url} key={item.label}>
+                <a activeClassName="active">
+                  <Image src={item.icon} alt={item.label} />
+                  <div className="tooltip">{item.label}</div>
+                </a>
+              </Link>
             ))}
           </nav>
         </div>
 
         <div className="toolbar-section">
           <nav className="social-nav">
-            <a
-              href="https://github.com/MujahidElmaki"
-              target="_blank"
-              rel="noreferrer"
-              key="Github"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://twitter.com/datboymaki"
-              target="_blank"
-              rel="noreferrer"
-              key="Twitter"
-            >
-              <FaTwitter />
-            </a>
+            <Link href="https://github.com/MujahidElmaki">
+              <a target="_blank" rel="noreferrer" key="Github">
+                <FaGithub />
+              </a>
+            </Link>
+            <Link href="https://twitter.com/datboymaki">
+              <a target="_blank" rel="noreferrer" key="Twitter">
+                <FaTwitter />
+              </a>
+            </Link>
           </nav>
         </div>
       </div>
