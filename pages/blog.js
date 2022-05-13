@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Post, PostCard, Categories, PostWidget, Footer } from '../components';
 import { getPosts } from '../services';
 
-export default function blog({ posts }) {
+export default function Blog({ posts }) {
   return (
     <>
       <article className="blog-page">

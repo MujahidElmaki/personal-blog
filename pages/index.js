@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Post, PostCard, Categories, PostWidget, Footer } from '../components';
-import Link from 'react';
+import Link from 'next/link';
 import maki from '../assets/maki2.jpg';
 import { getPosts } from '../services';
 import { FeaturedPosts } from '../sections';
@@ -39,7 +39,10 @@ export default function Home({ posts }) {
         </header>
         <div className="container">
           <h2 className="main-header">
-            <span>Latest Articles</span> <a href="/blog">View All</a>
+            <span>Latest Articles</span>
+            <Link href="/blog">
+              <a>View All</a>
+            </Link>
           </h2>
 
           <div>

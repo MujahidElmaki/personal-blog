@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import Link from 'next/link';
 import { getPosts } from '../services';
 
-const me = () => {
+const Me = () => {
   return (
     <>
       <article className="blog-page">
@@ -96,4 +96,4 @@ const me = () => {
   );
 };
 
-export default me;
+export default Me;

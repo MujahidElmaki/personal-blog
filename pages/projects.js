@@ -38,7 +38,7 @@ const projectsList = [
   },
 ];
 
-const projects = () => {
+const Projects = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
@@ -126,4 +126,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;
