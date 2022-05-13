@@ -15,7 +15,7 @@ const Footer = () => {
       <section>
         <nav>
           <span className="desktop-only">
-            Made With {'<'}3 by Mujahid Elmaki.
+            Made With Love by Mujahid Elmaki.
           </span>
         </nav>
       </section>

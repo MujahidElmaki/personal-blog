@@ -20,11 +20,11 @@ export default function Home({ posts }) {
           <div className="container">
             <div className="flex-content">
               <div>
-                <h1>Hey, Im Mujahid.</h1>
+                <h1>Hey, I&apos;m Mujahid.</h1>
                 <p className="subtitle small">
-                  Im a software developer in Ontario, Canada. I love learning
-                  and sharing my experiences, this website is my digital home.
-                  Highlighting my journey over the years!
+                  I&apos;m a software developer in Ontario, Canada. I love
+                  learning and sharing my experiences. This website is my
+                  digital home, highlighting my journey over the years!
                 </p>
               </div>
               <Image

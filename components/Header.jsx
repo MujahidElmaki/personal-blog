@@ -49,7 +49,6 @@ const Header = () => {
             {mainNavItems.map((item) => (
               <Link href={item.url} key={item.label}>
                 <a activeClassName="active">
-                  <Image src={item.icon} alt={item.label} />
                   <div className="tooltip">{item.label}</div>
                 </a>
               </Link>
